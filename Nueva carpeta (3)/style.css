@@ -1,0 +1,54 @@
+.border {
+  border: 1px dotted blue;
+}
+body {
+  background-color: grey;
+}
+
+#grilla {
+  display: grid;
+  grid-template-areas:
+    "elemento4 elemento4 elemento4"
+    "elemento2 elemento2 elemento3"
+    "elemento1 elemento5 elemento3";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px 1fr 1fr;
+}
+
+#elemento-1 {
+  grid-area: elemento1;
+  background-color: red;
+}
+#elemento-2 {
+  grid-area: elemento2;
+  background-color: white;
+}
+#elemento-3 {
+  grid-area: elemento3;
+  background-color: blue;
+}
+#elemento-4 {
+  grid-area: elemento4;
+  text-align: center;
+  background-color: orange;
+}
+#elemento-5 {
+  grid-area: elemento5;
+  background-color: green;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-color: black;
+    color: wheat;
+  }
+  #grilla {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "elemento3 elemento3"
+      "elemento1 elemento2"
+      "elemento1 elemento5"
+      "elemento4 elemento4";
+  }
+}
